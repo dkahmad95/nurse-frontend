@@ -12,7 +12,7 @@ interface RateStarsProps {
   className?: string;
 }
 
-const RateStars: React.FC<RateStarsProps> = ({ rating, className }) => {
+const RateStars: React.FC<RateStarsProps> = ({ rating }) => {
     const maxStars = 5
   const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
