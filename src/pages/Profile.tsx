@@ -4,7 +4,7 @@ import photo from "@/assets/profile.jpg";
 
 const Profile = () => {
   return (
-    <main className="min-h-[100vh] py-12 xl:py-0  gap-8">
+    <main className="min-h-[100vh]  gap-8">
       <div className="p-4 md:py-10 flex flex-row justify-center items-start gap-8 md:container">
         <div className=" w-full md:w-3/4 flex flex-col gap-y-4">
           <ProfileInfo
