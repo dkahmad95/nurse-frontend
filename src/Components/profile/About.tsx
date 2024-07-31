@@ -1,12 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import { MdOutlineModeEdit } from "react-icons/md";
 
 interface AboutProps {
   about: string;
   onEditClick?: () => void;
 }
 
-const About: React.FC<AboutProps> = ({ about, onEditClick }) => {
+const About: React.FC<AboutProps> = ({ about }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showSeeMore, setShowSeeMore] = useState(false);
   const aboutRef = useRef<HTMLParagraphElement>(null);
@@ -27,13 +26,11 @@ const About: React.FC<AboutProps> = ({ about, onEditClick }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-start bg-white border-2 rounded-xl p-8 gap-4">
+    <div className="flex flex-2 flex-col items-start bg-white border-2 rounded-xl p-8 gap-4">
       <div className="flex flex-col justify-center items-center gap-y-4">
-        <div className="flex flex-row w-full justify-between items-center">
-          <h1 className="text-xl font-bold">About</h1>
-          <MdOutlineModeEdit className="w-5 h-5" onClick={onEditClick} />
-        </div>
-        <div className={`relative ${isExpanded ? "" : "line-clamp-5"}`}>
+     
+          <h1 className="text-xl font-bold w-full text-start">About</h1>
+        <div className={`relative ${isExpanded ? "" : " line-clamp-5 md:line-clamp-none"}`}>
           <p ref={aboutRef} className="">
             {about}
           </p>
